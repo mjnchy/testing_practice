@@ -1,4 +1,4 @@
-import { calculator, capitalize, reverseString } from "./app.js";
+import { calculator, capitalize, reverseString, ceaserCipher } from "./app.js";
 
 test("capitalizes the first letter of the word.", () => {
   expect(capitalize("hello")).toBe("Hello");
@@ -26,4 +26,8 @@ test("multiplies 3 and 2 to equal 6", () => {
 
 test("divides 6 by 2 to equal 3", () => {
   expect(calculator.divide(6, 2)).toBe(3);
+});
+
+test("ceaser ciphers THE QUICK BROWN FOX JUMPS OVER THE LAZY DOG (lowerCase) to equal QEB NRFZH YOLTK CLU GRJMP LSBO QEB IXWV ALD (lowerCase also)", () => {
+  expect(ceaserCipher("THE QUICK BROWN FOX JUMPS OVER THE LAZY DOG".toLowerCase(), 23)).toBe("QEB NRFZH YOLTK CLU GRJMP LSBO QEB IXWV ALD".toLowerCase());
 });
