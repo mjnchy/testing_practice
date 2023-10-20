@@ -28,6 +28,6 @@ test("divides 6 by 2 to equal 3", () => {
   expect(calculator.divide(6, 2)).toBe(3);
 });
 
-test("ceaser ciphers THE QUICK BROWN FOX JUMPS OVER THE LAZY DOG (lowerCase) to equal QEB NRFZH YOLTK CLU GRJMP LSBO QEB IXWV ALD (lowerCase also)", () => {
-  expect(ceaserCipher("THE QUICK BROWN FOX JUMPS OVER THE LAZY DOG".toLowerCase(), 23)).toBe("QEB NRFZH YOLTK CLU GRJMP LSBO QEB IXWV ALD".toLowerCase());
+test("encrypts 'If he had anything confidential to say, he wrote it in cipher, that is, by so changing the order of the letters of the alphabet, that not a word could be made out.' to be 'Pm ol ohk hufaopun jvumpkluaphs av zhf, ol dyval pa pu jpwoly, aoha pz, if zv johunpun aol vykly vm aol slaalyz vm aol hswohila, aoha uva h dvyk jvbsk il thkl vba.'", () => {
+  expect(ceaserCipher("If he had anything confidential to say, he wrote it in cipher, that is, by so changing the order of the letters of the alphabet, that not a word could be made out.", 7)).toBe("Pm ol ohk hufaopun jvumpkluaphs av zhf, ol dyval pa pu jpwoly, aoha pz, if zv johunpun aol vykly vm aol slaalyz vm aol hswohila, aoha uva h dvyk jvbsk il thkl vba.")
 });

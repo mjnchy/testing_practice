@@ -33,19 +33,35 @@ function ceaserCipher (string, shift) {
     let letter =  String.fromCharCode(65 + i).toLowerCase();
     charObj[letter] = i;
     charIndex[i] = letter;
-  }
+  };
 
+  return cipherText(string, charObj, charIndex, shift, encrypted);
+
+  // let strArr = string.split("");
+  //
+  // strArr.forEach(char => {
+  //   let index = charObj[char] + shift;
+  //   if (index > 25) index = (index % 25) - 1;
+  //   let newChar = `${charIndex[index]}`;
+  //   if (char == " ") newChar = " ";
+  //   encrypted += newChar;
+  // });
+};
+
+function cipherText (string, obj, arr, shift, result) {
   let strArr = string.split("");
-  
+
   strArr.forEach(char => {
-    let index = charObj[char] + shift - 1;
-    if (index >= 25) index = index % 25;
-    let newChar = `${charIndex[index]}`;
+    let index = obj[char] + shift;
+    if (index > 25) index = (index % 25) - 1;
+    let newChar = `${arr[index]}`;
     if (char == " ") newChar = " ";
-    encrypted += newChar;
+
+    result += newChar;
   });
 
-  return encrypted;
-};
+  return result;
+}
+
 
 export {capitalize, reverseString, calculator, ceaserCipher };
