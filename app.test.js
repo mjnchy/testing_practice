@@ -1,4 +1,4 @@
-import { calculator, capitalize, reverseString, ceaserCipher } from "./app.js";
+import { calculator, capitalize, reverseString, ceaserCipher, analyzeArray } from "./app.js";
 
 test("capitalizes the first letter of the word.", () => {
   expect(capitalize("hello")).toBe("Hello");
@@ -30,4 +30,13 @@ test("divides 6 by 2 to equal 3", () => {
 
 test("encrypts 'If he had anything confidential to say, he wrote it in cipher, that is, by so changing the order of the letters of the alphabet, that not a word could be made out.' to be 'Pm ol ohk hufaopun jvumpkluaphs av zhf, ol dyval pa pu jpwoly, aoha pz, if zv johunpun aol vykly vm aol slaalyz vm aol hswohila, aoha uva h dvyk jvbsk il thkl vba.'", () => {
   expect(ceaserCipher("If he had anything confidential to say, he wrote it in cipher, that is, by so changing the order of the letters of the alphabet, that not a word could be made out.", 7)).toBe("Pm ol ohk hufaopun jvumpkluaphs av zhf, ol dyval pa pu jpwoly, aoha pz, if zv johunpun aol vykly vm aol slaalyz vm aol hswohila, aoha uva h dvyk jvbsk il thkl vba.")
+});
+
+test("analyzes given array [1,8,3,4,2,6] to equal object {average: 4, max: 8, min: 1, length: 6}", () => {
+  expect(analyzeArray([1,8,3,4,2,6])).toEqual({
+    average: 4,
+    min: 1,
+    max: 8,
+    length: 6,
+  });
 });

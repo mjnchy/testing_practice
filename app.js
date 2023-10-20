@@ -56,5 +56,13 @@ function cipherText (string, obj, arr, shift, result) {
   return result;
 };
 
+function analyzeArray (arr) {
+  return {
+    average: arr.reduce((prev, cur) => prev + cur, 0) / arr.length,
+    max: Math.max(...arr),
+    min: Math.min(...arr),
+    length: arr.length,
+  };
+};
 
-export {capitalize, reverseString, calculator, ceaserCipher };
+export {capitalize, reverseString, calculator, ceaserCipher, analyzeArray };
